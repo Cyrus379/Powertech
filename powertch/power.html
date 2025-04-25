@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Powertech Electrical Engineering Works</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background: linear-gradient(to right, rgb(153, 109, 25), rgb(217, 147, 18), rgb(240, 159, 8));
+      font-family: Arial, sans-serif;
+    }
+
+    .background-container {
+      height: 100vh;
+      width: 100%;
+      background-size: cover;
+      background-position: center;
+      transition: background-image 0.8s ease-in-out;
+      position: relative;
+    }
+
+    nav {
+      width: 100%;
+      height: 100px;
+      background-color: transparent;
+      position: relative;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+      height: 100%;
+    }
+
+    .logoside {
+      color: white;
+      font-size: 20px;
+      font-weight: 200;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-left: 60px;
+    }
+
+    .logoside img {
+      width: 80px;
+      border-radius: 18px;
+    }
+
+    .linksside {
+      margin-right: 60px;
+      font-size: 20px;
+      font-weight: 200;
+      color: white;
+    }
+
+    .linksside ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .linksside li {
+      text-transform: capitalize;
+      cursor: pointer;
+      box-shadow: 0 0 20px #18020290;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      position: absolute;
+      right: 20px;
+      top: 35px;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+    }
+
+    .sbackgroundpics {
+      display: flex;
+      gap: 10px;
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      z-index: 10;
+      flex-wrap: wrap;
+    }
+
+    .sbackgroundpics img {
+      width: 100px;
+      height: 100px;
+      border-radius: 15px;
+      cursor: pointer;
+      border: transparent;
+      box-shadow: 0 0 5px rgba(0,0,0,0.5);
+      transition: transform 0.3s;
+    }
+
+    .sbackgroundpics img:hover {
+      transform: scale(1.05);
+    }
+
+    .words h1, .words h2 {
+      text-transform: uppercase;
+    }
+
+    .words > div {
+      display: none;
+      color: white;
+      padding: 20px;
+      position: absolute;
+      top: 120px;
+      left: 60px;
+      background-color: transparent;
+      border-radius: 10px;
+      max-width: 400px;
+    }
+
+    .words > div.active {
+      display: block;
+    }
+
+    /* Media Queries */
+    @media (max-width: 1024px) {
+      .logoside {
+        font-size: 16px;
+        margin-left: 20px;
+      }
+
+      .linksside {
+        font-size: 16px;
+        margin-right: 20px;
+      }
+
+      .sbackgroundpics img {
+        width: 80px;
+        height: 80px;
+      }
+
+      .words > div {
+        max-width: 300px;
+        left: 40px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        padding: 10px 20px;
+      }
+
+      .logoside {
+        margin-left: 0;
+        margin-bottom: 10px;
+      }
+
+      .linksside {
+        display: none;
+        width: 100%;
+      }
+
+      .linksside ul {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+      }
+
+      .linksside.show {
+        display: flex;
+        justify-content: center;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .sbackgroundpics img {
+        width: 70px;
+        height: 70px;
+      }
+
+      .words > div {
+        top: 180px;
+        left: 20px;
+        max-width: 90%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logoside span {
+        font-size: 14px;
+      }
+
+      .linksside {
+        font-size: 14px;
+      }
+
+      .sbackgroundpics img {
+        width: 60px;
+        height: 60px;
+      }
+
+      .words > div {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="background-container" id="bg-container">
+    <nav>
+      <div class="container">
+        <div class="logoside">
+          <img src="pics/ChatGPT Image 24 avr. 2025, 22_46_31.png" alt="Company Logo" />
+          <span>Powertech Electrical Engineering Works</span>
+        </div>
+        <div class="hamburger" id="hamburger">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="linksside" id="linksside">
+          <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Service</li>
+            <li>Contact Us</li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="sbackgroundpics" id="previewContainer">
+      <img src="pics/Power Lines and Electric Pylons Stock Vector - Illustration of pole, insulators_ 7888334.jpg" />
+      <img src="pics/Download premium image of Photography of engineer man wallpaper adult transportation architecture_ about wallpaper, airplane, sky, person, and man 13727540.jpg" />
+      <img src="pics/Tips to Choose a Reliable Electrician Service Provider -.jpg" />
+      <img src="pics/Types of Motors - Classification of AC, DC & Special Motors.jpg" />
+    </div>
+  </div>
+
+  <div class="words" id="words">
+    <div class="word">
+      <h1>pylon installation</h1>
+      <p>We install pylons and provide power to houses.<br>We also do wiring of houses, whether brick or wooden.</p>
+    </div>
+    <div class="word">
+      <h2>we train artisans</h2>
+      <p>We can train anyone to become a professional electrical engineer capable of working in mines and ships.</p>
+    </div>
+    <div class="word">
+      <h2>we do installation of meters and transformers</h2>
+      <p>We sell and repair transformers.</p>
+    </div>
+    <div class="word">
+      <h2>we teach you all the basics of electricals</h2>
+      <p>We teach you how to change book theory into real life application.</p>
+    </div>
+  </div>
+
+  <script>
+    const container = document.getElementById('bg-container');
+    const previewContainer = document.getElementById('previewContainer');
+    const wordDivs = document.querySelectorAll('.words .word');
+    const hamburger = document.getElementById('hamburger');
+    const linksside = document.getElementById('linksside');
+
+    function setBackgroundFromImage(img, index) {
+      container.style.backgroundImage = `
+        linear-gradient(to right, rgba(153,109,25,0.7), rgba(217,147,18,0.7), rgba(240,159,8,0.7)),
+        url('${img.src}')
+      `;
+      previewContainer.appendChild(img);
+
+      wordDivs.forEach((div, i) => {
+        div.classList.toggle('active', i === index);
+      });
+    }
+
+    function rotateBackground() {
+      const firstImg = previewContainer.children[0];
+      const index = Array.from(previewContainer.children).indexOf(firstImg);
+      setBackgroundFromImage(firstImg, index);
+    }
+
+    const thumbnails = previewContainer.querySelectorAll('img');
+    thumbnails.forEach((img, i) => {
+      img.addEventListener('click', () => {
+        setBackgroundFromImage(img, i);
+      });
+    });
+
+    hamburger.addEventListener('click', () => {
+      linksside.classList.toggle('show');
+    });
+
+    rotateBackground();
+    setInterval(rotateBackground, 30000);
+  </script>
+</body>
+</html>
